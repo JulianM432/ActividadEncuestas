@@ -37,10 +37,12 @@
             // listBox
             // 
             this.listBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBox.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox.FormattingEnabled = true;
+            this.listBox.ItemHeight = 21;
             this.listBox.Location = new System.Drawing.Point(0, 0);
             this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(519, 188);
+            this.listBox.Size = new System.Drawing.Size(285, 188);
             this.listBox.TabIndex = 0;
             // 
             // btnSalir
@@ -48,7 +50,7 @@
             this.btnSalir.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnSalir.Location = new System.Drawing.Point(0, 188);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(519, 40);
+            this.btnSalir.Size = new System.Drawing.Size(285, 40);
             this.btnSalir.TabIndex = 1;
             this.btnSalir.Text = "Cerrar";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -61,14 +63,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(519, 228);
+            this.panel1.Size = new System.Drawing.Size(285, 228);
             this.panel1.TabIndex = 2;
             // 
             // FormResultado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 228);
+            this.ClientSize = new System.Drawing.Size(285, 228);
             this.Controls.Add(this.panel1);
             this.Name = "FormResultado";
             this.Text = "FormResultado";
@@ -78,9 +80,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listBox;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.ListBox listBox;
     }
 }

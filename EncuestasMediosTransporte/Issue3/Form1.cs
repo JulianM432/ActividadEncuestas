@@ -35,16 +35,32 @@ namespace Issue3
                 }
                 proceso.RegistrarEncuesta(nuevo, vRegistro.cbContacto.Checked);
             }
+            vRegistro.Dispose();
         }
 
         private void btnResultados_Click(object sender, EventArgs e)
         {
-
+            FormResultado vResultado = new FormResultado();
+            vResultado.listBox.Items.Clear();
+            vResultado.listBox.Items.Add("Bicicleta: " + proceso.PorcBicleta.ToString() + "%");
+            vResultado.listBox.Items.Add("Automovil: " + proceso.PorcAuto.ToString() + "%");
+            vResultado.listBox.Items.Add("Transporte Publico: " + proceso.PorcTranspPublico.ToString() + "%");
+            vResultado.ShowDialog();
+            vResultado.Dispose();
         }
 
         private void btnListado_Click(object sender, EventArgs e)
         {
-
+            FormContacto vContacto = new FormContacto();
+            //vContacto.listBox1.Items.Clear();
+            vContacto.listBox1.Items.Add("\tInforme de resultados contactables:");
+            vContacto.listBox1.Items.Add("");
+            for (int i = 0; i < proceso.CantContactables; i++)
+            {
+                vContacto.listBox1.Items.Add(proceso.VerContactable(i).Email + "  -  " + proceso.VerContactable(i).DistanciaASuDestino.ToString("0.00 km"));
+            }
+            vContacto.ShowDialog();
+            vContacto.Dispose();
         }
     }
 }
