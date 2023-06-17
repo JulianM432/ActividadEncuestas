@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Issue3
 {
-    public partial class FormContacto : Form
+    public partial class FormListBox : Form
     {
-        public FormContacto()
+        public FormListBox()
         {
             InitializeComponent();
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
             Close();
         }

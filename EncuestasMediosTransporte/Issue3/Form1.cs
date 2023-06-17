@@ -21,10 +21,10 @@ namespace Issue3
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-            Encuesta nuevo = new Encuesta();
             FormRegistro vRegistro = new FormRegistro();
             if (vRegistro.ShowDialog() == DialogResult.OK)
             {
+                Encuesta nuevo = new Encuesta();
                 nuevo.UsaBicicleta = vRegistro.cbBici.Checked;
                 nuevo.UsaAuto = vRegistro.cbAuto.Checked;
                 nuevo.UsaTransportePublico = vRegistro.cbTransportePublico.Checked;
@@ -40,24 +40,22 @@ namespace Issue3
 
         private void btnResultados_Click(object sender, EventArgs e)
         {
-            FormResultado vResultado = new FormResultado();
-            vResultado.listBox.Items.Clear();
-            vResultado.listBox.Items.Add("Bicicleta: " + proceso.PorcBicleta.ToString() + "%");
-            vResultado.listBox.Items.Add("Automovil: " + proceso.PorcAuto.ToString() + "%");
-            vResultado.listBox.Items.Add("Transporte Publico: " + proceso.PorcTranspPublico.ToString() + "%");
+            FormListBox vResultado = new FormListBox();
+            vResultado.listBox.Items.Add(string.Format("{0:-40} %{1,-10:f2}", "Porcentaje Bicicletas:", proceso.PorcBicleta));
+            vResultado.listBox.Items.Add(string.Format("{0:-40} %{1,-10:f2}", "Porcentaje Automovil:", proceso.PorcAuto));
+            vResultado.listBox.Items.Add(string.Format("{0:-40} %{1,-10:f2}", "Porcentaje Transporte publico:", proceso.PorcTranspPublico));
             vResultado.ShowDialog();
             vResultado.Dispose();
         }
 
         private void btnListado_Click(object sender, EventArgs e)
         {
-            FormContacto vContacto = new FormContacto();
-            //vContacto.listBox1.Items.Clear();
-            vContacto.listBox1.Items.Add("\tInforme de resultados contactables:");
-            vContacto.listBox1.Items.Add("");
+            FormListBox vContacto = new FormListBox();
+            vContacto.listBox.Items.Add("\tInforme de resultados contactables:");
+            vContacto.listBox.Items.Add("");
             for (int i = 0; i < proceso.CantContactables; i++)
             {
-                vContacto.listBox1.Items.Add(proceso.VerContactable(i).Email + "  -  " + proceso.VerContactable(i).DistanciaASuDestino.ToString("0.00 km"));
+                vContacto.listBox.Items.Add(proceso.VerContactable(i).Email + "  -  " + proceso.VerContactable(i).DistanciaASuDestino.ToString("0.00 km"));
             }
             vContacto.ShowDialog();
             vContacto.Dispose();

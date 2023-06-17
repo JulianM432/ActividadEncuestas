@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncuestasCMD", "EncuestasCM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncuestasLib", "EncuestasLib\EncuestasLib.csproj", "{3B66EA2F-3AFD-4D81-87B2-EC5C86047A8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Issue3", "Issue3\Issue3.csproj", "{7E198673-6C06-4317-A7B8-EB86983FFB17}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncuestaForm", "Issue3\EncuestaForm.csproj", "{7E198673-6C06-4317-A7B8-EB86983FFB17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

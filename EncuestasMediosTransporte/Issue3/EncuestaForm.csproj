@@ -52,37 +52,28 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormContacto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormContacto.Designer.cs">
-      <DependentUpon>FormContacto.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormRegistro.Designer.cs">
       <DependentUpon>FormRegistro.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormResultado.cs">
+    <Compile Include="FormListBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormResultado.Designer.cs">
-      <DependentUpon>FormResultado.cs</DependentUpon>
+    <Compile Include="FormListBox.Designer.cs">
+      <DependentUpon>FormListBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormContacto.resx">
-      <DependentUpon>FormContacto.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormRegistro.resx">
       <DependentUpon>FormRegistro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormResultado.resx">
-      <DependentUpon>FormResultado.cs</DependentUpon>
+    <EmbeddedResource Include="FormListBox.resx">
+      <DependentUpon>FormListBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
